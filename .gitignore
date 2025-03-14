@@ -1,0 +1,4 @@
+.env
+app.db
+.flaskenv
+script.sql
