@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<script type="text/javascript">
+    window.onload=function() { if (document.getElementById) {
+        titleMarquee();
+        }
+    }
+</script>
+    <html>
+    <head>
+            {{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419, -122.1419)])}}
+            {{mymap.js}}
+            <title> Soundtrack of the City </title>
+                  
+            <script type="text/javascript">
+                var titleText = document.title;
+                function titleMarquee() {
+                    titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+                    document.title = titleText;
+                    setTimeout("titleMarquee()", 450);
+                }
+            </script>
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQT1K7DBMS"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-ZQT1K7DBMS');
+            </script>
+    </head>
+    <body>
+        <body style='margin: 0'></body>
+        <div style="width: 100%; height: 100%" id="mapContainer"></div>
+        <h1>music sounds better with you</h1>
+        {{mymap.html}}
+    </body>
+</html>
