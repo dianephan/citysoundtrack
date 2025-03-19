@@ -47,7 +47,7 @@ def register_routes(app):
     def submit_form():
         if request.method == 'POST':
             # Get form data
-            user = request.form.get('user')
+            username = request.form.get('username', 'anonymous')
             title = request.form.get('title')
             latitude = request.form.get('latitude')
             longitude = request.form.get('longitude')
@@ -55,7 +55,8 @@ def register_routes(app):
             artist = request.form.get('artist')
             
             # Insert data into database
-            success = insert_location(user, title, latitude, longitude, song, artist)
+            print(f"Inserting data for username: {username}, title: {title}, latitude: {latitude}, longitude: {longitude}, song: {song}, artist: {artist}")
+            success = insert_location(username, title, latitude, longitude, song, artist)
             
             if not success:
                 return "An error occurred while saving your data."
