@@ -2,16 +2,15 @@ from flask import Flask
 from flask_googlemaps import GoogleMaps
 from threading import Event
 import sys
-
-from config import GOOGLE_MAPS_API, LAUNCHDARKLY_SDK_KEY, GOOGLE_MAPS_FLAG_KEY, SECRET_KEY
+from config import GOOGLE_MAPS_API, LAUNCHDARKLY_SDK_KEY, GOOGLE_MAPS_FLAG_KEY, SECRET_KEY, DATABASE_URI
 from routes import register_routes
 from feature_flags import initialize_ldclient
 
 def create_app():
     app = Flask(__name__)
     app.secret_key = SECRET_KEY
-  
-    # Initialize Google Maps
+    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+
     GoogleMaps(app, key=GOOGLE_MAPS_API)
     
     register_routes(app)
