@@ -29,11 +29,17 @@ def register_routes(app):
                 "top:0;"
                 "position:absolute;"
                 "z-index:200;"
-                "zoom: -9999999;"
             ),
-            # these coordinates re-center the map
-            lat=40.7527,
-            lng=-73.9772,
+            # Center on the US
+            # 40.08859435498663, -98.61733537069757
+            lat=40.08859435498663,
+            lng=-98.61733537069757,
+
+            # Zoom level: 1-20, lower numbers show more area
+            # zoom=3: Shows most of a continent
+            # zoom=2: Shows multiple continents
+            # zoom=1: Shows almost the entire world
+            zoom=5,
             markers=markers,
         )
         
@@ -61,6 +67,6 @@ def register_routes(app):
             if not success:
                 return "An error occurred while saving your data."
             
-            return redirect(url_for('mapview'))
+            return redirect(url_for('home'))
         
         return redirect(url_for('home')) 
