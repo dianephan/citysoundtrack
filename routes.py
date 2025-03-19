@@ -48,6 +48,14 @@ def register_routes(app):
     @app.route('/form')
     def show_form():
         return render_template('form.html')
+    
+    @app.route('/story')
+    def show_story():
+        return render_template('story.html')    
+    
+    @app.route('/home')
+    def show_home():
+        return render_template('index.html') 
 
     @app.route('/submit', methods=['POST'])
     def submit_form():
