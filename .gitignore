@@ -1,3 +1,6 @@
 .env
 .flaskenv
 script.sql
+wsgi.py
+run.py
+__pycache__/
