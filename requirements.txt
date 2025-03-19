@@ -4,11 +4,14 @@ click==8.1.8
 expiringdict==1.2.2
 Flask==2.3.1
 Flask-GoogleMaps==0.2.6
+gunicorn==23.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.6
 launchdarkly-eventsource==1.2.2
 launchdarkly-server-sdk==9.10.0
 MarkupSafe==3.0.2
+packaging==24.2
+psycopg2-binary==2.9.10
 pyRFC3339==2.0.1
 python-dotenv==1.0.1
 semver==3.0.4
