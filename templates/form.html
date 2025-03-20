@@ -65,20 +65,33 @@
         <form action="/submit" method="POST">
             <div class="form-group">
                 <label for="username">Your (letterboxd) username:</label>
+                <i>
+                    <p>this is not public information.</p>
+                </i>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="title">Your movie-moment memory:</label>
+                <i>
+                    <p>"And in this moment I swear, we are infinite." 
+                        <br> - Perks of Being a Wallflower (2012) </p>
+                </i>
                 <input type="text" id="title" name="title" required>
             </div>
             
             <div class="form-group">
                 <label for="latitude">Latitude:</label>
+                <i>
+                    <p><a href="https://github.com/dianephan/citysoundtrack/blob/main/README.md">watch a gif on how to find your latitude and longitude</a></p>
+                </i>
                 <input type="number" id="latitude" name="latitude" step="any" required>
             </div>
             
             <div class="form-group">
                 <label for="longitude">Longitude:</label>
+                <i>
+                    <p>please don't forget the minus sign (-) and decimal point (.)</p>
+                </i>
                 <input type="number" id="longitude" name="longitude" step="any" required>
             </div>
             
