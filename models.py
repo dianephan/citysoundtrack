@@ -27,7 +27,7 @@ def fetch_crowdsourced_locations():
             music_data = cur.fetchall()
             
             for entry in music_data:
-                print("[DATA] : parsed crowdsourced entry = ", entry)          
+                # print("[DATA] : parsed crowdsourced entry = ", entry)          
                 markers.append({
                     'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
                     'lat': entry[2], 
@@ -87,7 +87,7 @@ def fetch_locations():
             music_data = cur.fetchall()
             
             for entry in music_data: 
-                print("[DATA] : parsed entry = ", entry)          
+                # print("[DATA] : parsed entry = ", entry)          
                 markers.append({
                     'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                     'lat': entry[2], 
