@@ -64,19 +64,19 @@
     <div class="form-container">
         <form action="/submit" method="POST">
             <div class="form-group">
-                <label for="username">Your (letterboxd) username:</label>
+                <label for="username">Your name:</label>
                 <i>
                     <p>this is not public information.</p>
                 </i>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="letterboxd username" required>
             </div>
             <div class="form-group">
                 <label for="title">Your movie-moment memory:</label>
-                <i>
+                <!-- <i>
                     <p>"And in this moment I swear, we are infinite." 
                         <br> - Perks of Being a Wallflower (2012) </p>
-                </i>
-                <input type="text" id="title" name="title" required>
+                </i> -->
+                <input type="text" id="title" name="title" placeholder="'And in this moment I swear, we are infinite.' - Perks of Being a Wallflower (2012)">
             </div>
             
             <div class="form-group">
@@ -84,25 +84,25 @@
                 <i>
                     <p><a href="https://github.com/dianephan/citysoundtrack/blob/main/README.md">watch a gif on how to find your latitude and longitude</a></p>
                 </i>
-                <input type="number" id="latitude" name="latitude" step="any" required>
+                <input type="number" id="latitude" name="latitude" step="any" placeholder="37.804415" required>
             </div>
             
             <div class="form-group">
                 <label for="longitude">Longitude:</label>
                 <i>
-                    <p>please don't forget the minus sign (-) and decimal point (.)</p>
+                    <p>please don't forget the minus sign (-) if applicable, and decimal point (.)</p>
                 </i>
-                <input type="number" id="longitude" name="longitude" step="any" required>
+                <input type="number" id="longitude" name="longitude" step="any" placeholder="-122.323489" required>
             </div>
             
             <div class="form-group">
                 <label for="song">Song:</label>
-                <input type="text" id="song" name="song" required>
+                <input type="text" id="song" name="song" placeholder="Song of Storms" required>
             </div>
             
             <div class="form-group">
                 <label for="artist">Artist:</label>
-                <input type="text" id="artist" name="artist" required>
+                <input type="text" id="artist" name="artist" placeholder="Koji Kondo" required>
             </div>
             
             <button type="submit">Submit</button>

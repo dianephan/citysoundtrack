@@ -7,27 +7,41 @@
     <style>
         body {
             font-family: "Lucida Console", "Courier New", monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
         }
+        
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
         h1 {
             color: #333;
             text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
+        
         h3 {
             color: #333;
             text-align: center;
         }
+        
         .button-container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             gap: 20px;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            padding: 20px 0;
         }
+        
         .button {
             padding: 15px 30px;
             font-size: 18px;
@@ -39,34 +53,57 @@
             text-decoration: none;
             text-align: center;
         }
+        
         .button:hover {
             background-color: #45a049;
+        }
+        
+        .text-content {
+            text-align: center;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .button {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="button-container" style="max-width: 800px; margin: 0 auto; position: fixed; top: 50px; left: 50%; transform: translateX(-50%); flex-direction: row;">
-        <a href="/map" class="button">View Map</a>
-        <a href="/form" class="button">Add Location</a>
-        <a href="/home" class="button">Home</a>
-    </div>
-
-    <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px;">
-        <h1 style="font-size: 2.5em; margin-bottom: 30px;">Your Life is a Movie</h1>
-        
-        <p style="font-size: 1.2em; line-height: 1.6; margin-bottom: 20px;">
-            Inspired by my love of movie soundtracks and adventures traveling around the world, I wanted to create a map that encourages you to have a personalized soundtrack and feel like the main character.
-            <br>
-            It's a pleasant feeling romanticizing your life and listening to a song on a train, or reminiscing about the past when a certain song plays.
-            <br>
-            <br>
-            <h3>It's also fun watching movies that took place in the same city as you. </h3>
-            In another version of this app, I plotted a song from a movie that took place at the real location of the movie.
-            Please reach out if you would like to contribute to this project and help populate the map with songs of movies that take place in your favorite cities.
-            <br>
-            <br>
-            <h3>Thank you for your stories and the music that means something to you! <3 </h3>
-        </p>
+    <div class="page-container">
+        <div class="text-content">
+            <h1>Your Life is a Movie</h1>
+            <p>
+                Inspired by my love of movie soundtracks and adventures traveling around the world, I wanted to create a map that encourages you to have a personalized soundtrack and feel like the main character.
+                <br>
+                It's a pleasant feeling romanticizing your life and listening to a song on a train, or reminiscing about the past when a certain song plays.
+            </p>
+            
+            <h3>It's also fun watching movies that took place in the same city as you.</h3>
+            <p>
+                In another version of this app, I plotted a song from a movie that took place at the real location of the movie.
+                Please reach out if you would like to contribute to this project and help populate the map with songs of movies that take place in your favorite cities.
+            </p>
+            
+            <h3>Thank you for your stories and the music that means something to you! <3</h3>
+        </div>
+        <div class="button-container">
+            <a href="/map" class="button">View Map</a>
+            <a href="/form" class="button">Add Location</a>
+            <a href="/home" class="button">Home</a>
+        </div>
     </div>
 </body>
 </html> 

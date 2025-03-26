@@ -5,7 +5,9 @@ any memory you had that made YOU feel like a main character. what song was playi
 
 ## How to find coordinates for your location
 
-![How to find coordinates](static/coordinates.gif)
+
+
+![How to find coordinates (desktop verions)](static/coordinates.gif)
 
 1. Go to [Google Maps](https://www.google.com/maps)
 2. Right click on your desired location
